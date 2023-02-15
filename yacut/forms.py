@@ -9,7 +9,7 @@ class URLMapForm(FlaskForm):
         validators=(
             DataRequired(message='Обязательное поле'),
             URL(message='Введите адрес URL'),
-            Length(1, 256),
+            Length(max=256),
         )
     )
     custom_id = StringField(
@@ -19,8 +19,8 @@ class URLMapForm(FlaskForm):
                 r'^[0-9a-zA-Z]{1,16}$',
                 message='Указано недопустимое имя для короткой ссылки',
             ),
-            Length(1, 16),
-            Optional(),
+            Length(max=16),
+            Optional(strip_whitespace=False),
         )
     )
     submit = SubmitField('Создать')
