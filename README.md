@@ -40,7 +40,11 @@ python -m venv venv
 ```
 pip install -r requirements.txt
 ```
-5. Запуск приложения
+5. Создать базу данных `SQLite`
+```
+flask db upgrade
+```
+6. Запуск приложения
 ```
 flask run
 ```
