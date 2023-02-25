@@ -36,7 +36,7 @@ python -m venv venv
 ```
 . venv/bin/activate
 ```
-4. Установить зависимости из файла requirements.txt
+4. Установить зависимости из файла `requirements.txt`
 ```
 pip install -r requirements.txt
 ```
